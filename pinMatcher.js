@@ -13,75 +13,61 @@ const pinGenerate = document
 //Button number store and showing to user
 let storeInputNumber = "";
 
+function store(classStr) {
+  storeInputNumber += document.getElementById(classStr).innerText;
+  document.getElementById("user-input").value = storeInputNumber;
+  hide();
+}
+
 const btnClick7 = document
   .getElementById("btn-7")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-7").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-7");
   });
 const btnClick8 = document
   .getElementById("btn-8")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-8").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-8");
   });
 const btnClick9 = document
   .getElementById("btn-9")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-9").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-9");
   });
 const btnClick4 = document
   .getElementById("btn-4")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-4").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-4");
   });
 const btnClick5 = document
   .getElementById("btn-5")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-5").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-5");
   });
 const btnClick6 = document
   .getElementById("btn-6")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-6").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-6");
   });
 const btnClick1 = document
   .getElementById("btn-1")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-1").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-1");
   });
 const btnClick2 = document
   .getElementById("btn-2")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-2").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-2");
   });
 const btnClick3 = document
   .getElementById("btn-3")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-3").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-3");
   });
 const btnClick0 = document
   .getElementById("btn-0")
   .addEventListener("click", function () {
-    storeInputNumber += document.getElementById("btn-0").innerText;
-    document.getElementById("user-input").value = storeInputNumber;
-    hide();
+    store("btn-0");
   });
 
 //Removing numbers
