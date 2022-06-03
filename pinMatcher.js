@@ -5,6 +5,7 @@ const pinGenerate = document
   .addEventListener("click", function () {
     fourDigit = Math.floor(Math.random() * 9000 + 999);
     document.getElementById("random-digit").value = fourDigit;
+    hide();
   });
 
 //Button number store and showing to user
@@ -15,78 +16,70 @@ const btnClick7 = document
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-7").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick8 = document
   .getElementById("btn-8")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-8").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick9 = document
   .getElementById("btn-9")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-9").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick4 = document
   .getElementById("btn-4")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-4").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick5 = document
   .getElementById("btn-5")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-5").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick6 = document
   .getElementById("btn-6")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-6").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick1 = document
   .getElementById("btn-1")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-1").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick2 = document
   .getElementById("btn-2")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-2").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick3 = document
   .getElementById("btn-3")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-3").innerText;
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 const btnClick0 = document
   .getElementById("btn-0")
   .addEventListener("click", function () {
     storeInputNumber += document.getElementById("btn-0").innerText;
     document.getElementById("user-input").value = storeInputNumber;
+    hide();
   });
 
 //Removing numbers
@@ -97,8 +90,7 @@ const remove1 = document
       storeInputNumber = storeInputNumber.slice(0, storeInputNumber.length - 1);
     }
     document.getElementById("user-input").value = storeInputNumber;
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 
 const remove2 = document
@@ -108,8 +100,7 @@ const remove2 = document
       document.getElementById("user-input").value = "";
       storeInputNumber = "";
     }
-    document.getElementById("matched").style.display = "none";
-    document.getElementById("not-matched").style.display = "none";
+    hide();
   });
 
 //Submit button code
@@ -139,3 +130,9 @@ const submit = document
       }
     }
   });
+
+//hide
+function hide() {
+  document.getElementById("matched").style.display = "none";
+  document.getElementById("not-matched").style.display = "none";
+}
