@@ -110,7 +110,7 @@ let num = 3;
 const submit = document
   .getElementById("submit-btn")
   .addEventListener("click", function () {
-    if (fourDigit === storeInputNumber && fourDigit !== 0) {
+    if (fourDigit == storeInputNumber && fourDigit !== 0) {
       document.getElementById("matched").style.display = "block";
     } else if (storeInputNumber === "") {
       wrongAns();
