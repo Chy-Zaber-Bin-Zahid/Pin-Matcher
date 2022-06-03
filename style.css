@@ -121,3 +121,16 @@ input[type="text"]:focus {
 #user-input {
   text-align: center;
 }
+
+.title {
+  color: green;
+  font-size: 70px;
+}
+
+.div1 {
+  text-align: center;
+  border: 2px solid red;
+  background-color: lightblue;
+  margin: 20px 350px 0px 350px;
+  border-radius: 10px;
+}
