@@ -110,7 +110,7 @@ let num = 3;
 const submit = document
   .getElementById("submit-btn")
   .addEventListener("click", function () {
-    if (fourDigit == storeInputNumber) {
+    if (fourDigit === storeInputNumber && fourDigit !== 0) {
       document.getElementById("matched").style.display = "block";
     } else if (storeInputNumber === "") {
       wrongAns();
@@ -131,6 +131,7 @@ function wrongAns() {
   num -= 1;
   document.getElementById("try").innerText = `${num} try left`;
   if (num === 0) {
+    document.getElementById("try").innerText = `${num} try left`;
     alert("Try limit exceeded! Try again?");
     document.getElementById("try").innerText = `${3} try left`;
     num = 3;
