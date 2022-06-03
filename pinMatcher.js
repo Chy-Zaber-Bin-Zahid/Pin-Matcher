@@ -5,6 +5,8 @@ const pinGenerate = document
   .addEventListener("click", function () {
     fourDigit = Math.floor(Math.random() * 9000 + 999);
     document.getElementById("random-digit").value = fourDigit;
+    document.getElementById("matched").style.display = "none";
+    document.getElementById("not-matched").style.display = "none";
   });
 
 //Button number store and showing to user
