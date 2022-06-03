@@ -6,6 +6,8 @@ const pinGenerate = document
     fourDigit = Math.floor(Math.random() * 9000 + 999);
     document.getElementById("random-digit").value = fourDigit;
     hide();
+    document.getElementById("try").innerText = `${3} try left`;
+    num = 3;
   });
 
 //Button number store and showing to user
@@ -111,23 +113,9 @@ const submit = document
     if (fourDigit == storeInputNumber) {
       document.getElementById("matched").style.display = "block";
     } else if (storeInputNumber === "") {
-      document.getElementById("matched").style.display = "block";
-      num -= 1;
-      document.getElementById("try").innerText = `${num} try left`;
-      if (num === 0) {
-        alert("Try limit exceeded! Try again?");
-        document.getElementById("try").innerText = `${3} try left`;
-        num = 3;
-      }
+      wrongAns();
     } else {
-      document.getElementById("not-matched").style.display = "block";
-      num -= 1;
-      document.getElementById("try").innerText = `${num} try left`;
-      if (num === 0) {
-        alert("Try limit exceeded! Try again?");
-        document.getElementById("try").innerText = `${3} try left`;
-        num = 3;
-      }
+      wrongAns();
     }
   });
 
@@ -135,4 +123,16 @@ const submit = document
 function hide() {
   document.getElementById("matched").style.display = "none";
   document.getElementById("not-matched").style.display = "none";
+}
+
+//wrong
+function wrongAns() {
+  document.getElementById("not-matched").style.display = "block";
+  num -= 1;
+  document.getElementById("try").innerText = `${num} try left`;
+  if (num === 0) {
+    alert("Try limit exceeded! Try again?");
+    document.getElementById("try").innerText = `${3} try left`;
+    num = 3;
+  }
 }
